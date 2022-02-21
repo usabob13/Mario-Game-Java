@@ -136,6 +136,7 @@
             float endTime;
             float dt = -1.0f;
 
+            currentScene.load();
             while (!glfwWindowShouldClose(glfwWindow)) {
                 // Poll events
                 glfwPollEvents();
@@ -156,6 +157,8 @@
                 beginTime = endTime;
 
             }
+
+            currentScene.saveExit();
         }
 
         public static int getWidth() {
